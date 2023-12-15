@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-height: 100vh;
+  background: radial-gradient(circle at 10% 20%, rgb(116, 203, 199) 0%, rgb(220, 246, 200) 90%);
+}
+
+a {
+  font-weight: 800;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  font-size: 3.5em;
+  line-height: 1.1;
+}
+h2 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+.home-icons {
+  padding: 0.5rem;
+  border-radius: 9999px;
+  background-color: rgb(116, 203, 199);
+}
+.home-icons:hover {
+  color:rgb(220, 246, 200);
+}
+.get-in-touch {
+  color: white;
+  background-color: rgb(116, 203, 199);
+  border: none;
+  font-weight: bold;
+}
+.get-in-touch:hover a {
+  color: rgb(220, 246, 200);
+}
+.video-outline {
+  background-color: rgb(116, 203, 199);
+  max-height: 700px;
+}
+.project-container {
+  transition: all .25s ease-in-out;
+}
+.project-container:hover {
+  transform: scale(1.1);
+}
+.project-btn {
+  background-color: rgb(116, 203, 199);
+  color: white;
+  border: none;
+}
+.project-btn:hover a {
+  color: rgb(220, 246, 200);
+}
+
+@layer base {
+  * {
+    @apply box-border list-none p-0 m-0 scroll-smooth;
+  }
+  body {
+    @apply text-white min-h-screen;
+  }
+  .project-container {
+    @apply flex items-center gap-6 border-2 p-4 rounded-xl shadow-2xl
+  }
+}
